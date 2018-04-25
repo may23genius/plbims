@@ -8,7 +8,6 @@ const config = {
     channelAccessToken: process.env.channelAccessToken,
     channelSecret: process.env.channelSecret
 };
-
 const client = new line.Client(config);
 
 app.post('/webhook', line.middleware(config), (req, res) => {
